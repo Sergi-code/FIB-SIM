@@ -12,14 +12,16 @@ class Client:
         self.env = env
         self.id = ident
         #self.arribada = env.now
-        self.numProds = math.floor(random.uniform(self.st.minProds, self.st.maxProds + 0.99))
+        self.numProds = random.randint(self.st.minProds, self.st.maxProds)
         self.num = 0  
-        print("%7.4f %s: Acabo d'arribar" % (env.now, ident))
+        hora = (env.now / 3600)
+        print(str(hora) + ' ' + str(ident) + ": Acabo d'arribar")
+        ##print("%7.4f %s: Acabo d'arribar" % (env.now, ident))
         print("Vull comprar " + str(self.numProds) + " productes")
 
     def comprant(self):
         for i in range(self.numProds):
-            numEstanteria = math.floor(random.uniform(0, self.st.numEstanteries - 0.01))
+            numEstanteria = random.randint(0, self.st.numEstanteries - 1)
             with self.sp.estanteries[numEstanteria].request() as req:
                 yield req
 
