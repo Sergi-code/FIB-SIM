@@ -39,7 +39,7 @@ class Client:
 
         yield self.env.timeout(10) ##temps Camina a cua
 
-        if self.st.numCaixesTrad == 0 or (self.st.numCaixesAuto > 0 and self.auto):
+        if self.st.numCaixesTrad == 0 or (self.st.numCaixesAuto != 0 and self.auto):
             self.tempsEntraCuaAuto = self.env.now
             self.op.write("Client " + str(self.id) + ": estic esperant a la cua d'autoservei\n")
             with self.sp.cues[0].request() as req:
@@ -60,7 +60,7 @@ class Client:
             with self.sp.caixesAuto[numCaixa].request() as req:
                 yield req
                 self.op.write("Client " + str(self.id) + ": estic comprant a la caixa d'autoservei " + str(numCaixa) + "\n")
-                yield self.env.timeout(random.gauss(self.st.tempsProd - 5, 10) * self.numProds)
+                yield self.env.timeout(random.gauss(self.st.tempsProd - 5, 5) * self.numProds)
                 self.st.setTempsCaixaAuto(self.env.now - self.entroCaixaAuto)
 
 
@@ -85,10 +85,10 @@ class Client:
             with self.sp.caixesTrad[numCaixa].request() as req:
                 yield req
                 self.op.write("Client " + str(self.id) + ": estic comprant a la caixa tradicional " + str(numCaixa) + "\n")
-                yield self.env.timeout(random.gauss(self.st.tempsProd, 10) * self.numProds)
+                yield self.env.timeout(random.gauss(self.st.tempsProd, 5) * self.numProds)
                 self.st.setTempsCaixaTrad(self.env.now - self.entroCaixaTrad)
 
-        self.op.write("Client " + str(self.id) + ": me las piro vampiro\n")
+        self.op.write("Client " + str(self.id) + ": surto del supermercat\n")
         
         if self.st.numCaixesTrad == 0 : self.st.setTempsSuper(1, self.env.now - self.tempsEntraSuper)
         elif self.st.numCaixesAuto == 0: self.st.setTempsSuper(0, self.env.now - self.tempsEntraSuper)

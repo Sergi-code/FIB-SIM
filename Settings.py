@@ -4,7 +4,7 @@ class Settings:
 
     ##  Auto
     meanTempsBuscantAuto = 0.0
-    numAuto = 0.0
+    numAuto = 0
 
     meanCuaAuto = 0.0
     esperaCuaMaxAuto = 0.0
@@ -15,7 +15,7 @@ class Settings:
 
     ##  Trad
     meanTempsBuscantTrad = 0.0
-    numTrad = 0.0
+    numTrad = 0
 
     meanCuaTrad = 0.0
     esperaCuaMaxTrad = 0.0
@@ -27,7 +27,7 @@ class Settings:
     ## Global
     meanProd = 0.0
     meanTempsBuscant = 0.0
-    numClients = 0.0
+    numClients = 0
 
     meanCua = 0.0
 
@@ -50,14 +50,23 @@ class Settings:
             Settings.__instance = self
 
             f = open("input.txt", "r")
+            self.comentaris = f.readline()
             self.seed = int(f.readline())
+            self.comentaris = f.readline()
             self.simTime = int(f.readline())
+            self.comentaris = f.readline()
             self.numEstanteries = int(f.readline())
+            self.comentaris = f.readline()
             self.numCaixesAuto = int(f.readline())
+            self.comentaris = f.readline()
             self.numCaixesTrad = int(f.readline())
+            self.comentaris = f.readline()
             self.tempsProd = int(f.readline())
+            self.comentaris = f.readline()
             self.prodsAuto = int(f.readline())
+            self.comentaris = f.readline()
             self.minProds = int(f.readline())
+            self.comentaris = f.readline()
             self.maxProds = int(f.readline())
             f.close()
     

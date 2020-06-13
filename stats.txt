@@ -1,20 +1,24 @@
 Estadistiques Clients de caixes d'autoservei
-Clients: 116.0
-Temps mitjana buscant productes dels clients d'autoservei: 3.706896551724138
-Espera mitjana a la cua d'autoservei: 0.5051724137931034
-Temps pasant els productes per la caixa: 1.2781723029849923
-Temps mitja que pasa un client de caixes d'autoservei al supermercat: 5.656907935168901
+Clients: 121
+Temps mitjana buscant productes dels clients d'autoservei: 3.514 min
+Espera mitjana a la cua d'autoservei: 0.253 min
+Espera maxima a la cua d'autoservei: 2.117 min
+Temps passant els productes per la caixa: 1.010 min
+Temps mitja que passa un client de caixes d'autoservei al supermercat: 4.943 min
 
 Estadistiques Clients de caixes tradicionals
-Clients: 266.0
-Temps mitjana buscant productes dels clients tradicionals: 12.056704260651628
-Espera mitjana a la cua tradicional: 29.076629072681705
-Temps pasant els productes per la caixa: 5.328970875949863
-Temps mitja que pasa un client de caixes tradicional al supermercat: 46.62897087594987
+Clients: 261
+Temps mitjana buscant productes dels clients tradicionals: 10.807 min
+Espera mitjana a la cua tradicional: 8.660 min
+Espera maxima a la cua tradicional: 49.983 min
+Temps passant els productes per la caixa: 4.394 min
+Temps mitja que passa un client de caixes tradicional al supermercat: 24.028 min
 
 Estadistiques Clients
-Clients: 382.0
-Temps mitjana buscant productes: 9.521160558464224
-Espera mitjana a la cua d'autoservei: 20.400479930191974
-Temps pasant els productes per la caixa: 4.098885445416025
-Temps mitja que pasa un client de caixes d'autoservei al supermercat: 34.187192600738896
+Clients: 382
+Percentatge d'utlització caixes d'autoservei: 31.675 % 
+Percentatge d'utlització caixes tradicionals: 68.325 % 
+Temps mitjana buscant productes: 8.497 min
+Espera mitjana a les cues: 5.997 min
+Temps passant els productes per les caixes: 3.322 min
+Temps mitja que passa un client al supermercat: 17.983 min

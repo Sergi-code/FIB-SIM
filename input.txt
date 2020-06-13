@@ -1,9 +1,18 @@
+## seed de la simulacio
 3
+## durada de la simulacio
 50000
+## nombre d'estanteries del supermercat
 6
+## nombre de caixes d'autoservei del supermercat
 1
+## nombre de caixes tradicional del supermercat
 2
-30
+## temps de processament dels productes
+25
+## productes maxims per anar a les caixes d'autoservei
 5
+## productes minims de la llista de la compra
 1
+## productes maxims de la llista de la compra
 15
