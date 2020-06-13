@@ -1,7 +1,6 @@
 import simpy
 import random
 from matplotlib import pyplot as plt
-import numpy as np
 from Supermercat import Supermercat
 from Client import Client
 from Settings import Settings as st
@@ -15,7 +14,7 @@ def font(env, number, interval):
         numClients = int(f.readline())
 
         while True:
-            if env.now == time:
+            if env.now >= time:
                 break
             yield env.timeout(60) ##temps espera
         
